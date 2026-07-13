@@ -1,35 +1,35 @@
-const { default: mongoose } = require("mongoose");
-const mangooses = require("mongoose");
+const mongoose = require("mongoose");
+const mangoose = require("mongoose");
 const productSchema = new mongoose.Schema(
     {
         name: {
             type: String,
-            require: true
+            required: true
         },
 
         price: {
             type: Number,
-            require: true
+            required: true
         },
 
         category: {
             type: String,
-            require: true
+            required: true
         },
 
         image: {
             type: String,
-            require: true
+            required: true
         },
 
         description:{
             type: String,
-            require: true
+            required: true
         },
 
         stock: {
             type: Number,
-            require: true
+            required: true
         }
     },
 
@@ -40,4 +40,4 @@ const productSchema = new mongoose.Schema(
 );
 
 
-module.exports = mongoose.model("Product","productSchema");
+module.exports = mongoose.model("Product",productSchema);

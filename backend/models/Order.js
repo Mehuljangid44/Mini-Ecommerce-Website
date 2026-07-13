@@ -1,30 +1,30 @@
-const { default: mongoose, mongo } = require("mongoose");
+const mongoose = require("mongoose");
 const orderSchema = new mongoose.Schema({
 
     customerName:{
         type: String,
-        require: true
+        required: true
     },
 
     phone: {
         type: String,
-        require: true
+        required: true
     },
 
     address: {
         type: String,
-        require: true
+        required: true
     },
 
-    products:{
+    products:[{
         name: String,
         quantity: Number,
         price: Number
-    },
+    }],
 
     totalAmount: {
         type: Number,
-        require: true
+        required: true
     }
 
 },
@@ -35,5 +35,5 @@ const orderSchema = new mongoose.Schema({
 
 );
 
-module.exports = mongoose.model("Order","orderSchema");
+module.exports = mongoose.model("Order",orderSchema);
 
