@@ -1,38 +1,90 @@
-.App {
+body{
+
+  margin: 0;
+  font-family: Arial;
+  background: #F5F5F5;
+}
+
+
+.navbar{
+  background:  #140404;
+  color: white;
+  padding: 20px;
   text-align: center;
 }
+.product-grid{
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax (250px , 1fr));
+  padding : 20px;
+
+
+} 
+
+.card {
+
+ background-color: white;
+ width: 600;
+ height: 400px;
+ padding: 20px;
+ border-radius:  10px;
+ text-align: center;
+ box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card img {
+
+width: 100%;
+height: 250px;
+object-fit: cover;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  background-color: rgb(32, 29, 24);
+  color:  white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+
+
+
+}
+
+button:hover {
+background:  wheat;
+
+color: black;
+
+}
+
+.cart{
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-item{
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.checkout {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius:  10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkout input ,
+.checkout textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+
 }
